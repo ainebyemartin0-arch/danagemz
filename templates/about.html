@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}About Us | Dana Gemz{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <div class="container">
+        <h1>Our Story</h1>
+        <p>Crafted with passion, designed for you.</p>
+    </div>
+</section>
+
+<section class="container content-block" data-reveal>
+    <h2>Welcome to Dana Gemz Collection</h2>
+    <p>
+        At Dana Gemz, we believe that jewelry is more than just an accessory; it is a statement of elegance, a memory preserved, and a legacy passed down. Founded in Uganda, our brand was born out of a deep passion for fine craftsmanship and timeless beauty.
+    </p>
+    <p>
+        Our slogan, <strong>"Uniquely Yours,"</strong> reflects our commitment to providing pieces that resonate with your personal style. Whether you are looking for a timeless gold bracelet, a custom-engraved ring, or a gift for a loved one, we ensure every piece meets the highest standards of luxury.
+    </p>
+    <p>
+        We pride ourselves on offering a personalized experience. From our digital storefront to our seamless WhatsApp ordering, we make luxury accessible, fast, and reliable for every customer across Uganda and beyond.
+    </p>
+    
+    <div style="margin-top: 3rem;">
+        <a href="{% url 'store:shop' %}" class="btn-primary">Explore Collection</a>
+    </div>
+</section>
+{% endblock %}
