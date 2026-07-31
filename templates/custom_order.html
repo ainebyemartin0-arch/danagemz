@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Custom Orders | Dana Gemz{% endblock %}
+
+{% block content %}
+<section class="custom-order-section">
+    <div class="form-container">
+        <h2>Custom Jewelry Orders</h2>
+        <p class="subtitle">"Uniquely Yours" - Have a specific design in mind? Send us the details and we'll make it happen.</p>
+        
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="form-group">
+                <label>Your Name</label>
+                {{ form.name }}
+            </div>
+            <div class="form-group">
+                <label>WhatsApp / Phone Number</label>
+                {{ form.phone_number }}
+            </div>
+            <div class="form-group">
+                <label>Describe Your Design</label>
+                {{ form.description }}
+            </div>
+            <div class="form-group">
+                <label>Upload Reference Image (Optional)</label>
+                {{ form.reference_image }}
+            </div>
+            <button type="submit" class="btn-primary">Submit Request</button>
+        </form>
+
+        <div class="divider">OR</div>
+
+        <a href="https://wa.me/256757649159?text=Hi%20Dana%20Gemz,%20I%20want%20to%20discuss%20a%20custom%20jewelry%20order." target="_blank" class="btn-whatsapp">Chat with us on WhatsApp directly</a>
+    </div>
+</section>
+{% endblock %}

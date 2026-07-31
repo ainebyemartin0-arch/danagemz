@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Core Meta Tags -->
+    <title>{% block title %}Dana Gemz Collection | Unique Jewelry in Uganda{% endblock %}</title>
+    <meta name="description" content="{% block meta_description %}Dana Gemz Collection offers premium, custom, and luxury jewelry in Uganda. Uniquely yours.{% endblock %}">
+    <meta name="keywords" content="Jewelry Uganda, Kampala jewelry, Dana Gemz, custom rings, gold bracelets, luxury jewelry">
+    
+    <!-- Open Graph / WhatsApp / Facebook Sharing Tags -->
+    <meta property="og:title" content="Dana Gemz Collection - Uniquely Yours">
+    <meta property="og:description" content="Premium and custom luxury jewelry in Uganda. Order easily via WhatsApp.">
+    <meta property="og:image" content="{% static 'images/logo.png' %}">
+    <meta property="og:url" content="https://danagemz.com">
+    <meta property="og:type" content="website">
+
+    {% load static %}
+    <link rel="icon" type="image/png" href="{% static 'images/logo.png' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="{% url 'store:home' %}" class="brand-logo">
+                <img src="{% static 'images/logo.png' %}" alt="Dana Gemz Logo" class="nav-logo">
+                <div class="brand-text">
+                    <span class="brand-main">Dana Gemz</span>
+                    <span class="brand-sub">COLLECTION</span>
+                </div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="{% url 'store:home' %}">Home</a></li>
+                <li><a href="{% url 'store:home' %}#collections">Shop</a></li>
+                <li><a href="{% url 'store:custom_order' %}">Custom Orders</a></li>
+                <li><a href="https://wa.me/256757649159" target="_blank" class="nav-cta">WhatsApp Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        {% if messages %}
+            <div class="message-container">
+                {% for message in messages %}
+                    <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+                {% endfor %}
+            </div>
+        {% endif %}
+
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <img src="{% static 'images/logo.png' %}" alt="Dana Gemz Logo" class="footer-logo">
+            <h3>Dana Gemz Collection</h3>
+            <p>Uniquely Yours</p>
+            <div class="socials">
+                <a href="https://instagram.com/" target="_blank">Instagram</a> | 
+                <a href="https://tiktok.com/" target="_blank">TikTok</a> | 
+                <!-- REPLACE THE EMAIL BELOW WITH HER ACTUAL GMAIL -->
+                <a href="mailto:danagemz@gmail.com">Gmail</a>
+            </div>
+            <p>&copy; {% now "Y" %} Dana Gemz. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>

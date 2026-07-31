@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load humanize %}
+
+{% block content %}
+<section class="hero">
+    <div class="hero-text">
+        <h1>Dana Gemz Collection</h1>
+        <p class="tagline">UNIQUELY YOURS</p>
+        <a href="#collections" class="btn-primary">Explore Collection</a>
+    </div>
+</section>
+
+<section id="collections" class="featured-section">
+    <h2>Featured Pieces</h2>
+    <p class="subtitle">Handpicked elegance for every occasion.</p>
+    
+    <div class="product-grid">
+        {% for product in products %}
+        <div class="product-card">
+            {% if product.image %}
+                <img src="{{ product.image.url }}" alt="{{ product.name }}" class="product-img">
+            {% else %}
+                <div class="product-img-placeholder">No Image</div>
+            {% endif %}
+            
+            <h3>{{ product.name }}</h3>
+            <p class="price">UGX {{ product.price|intcomma }}</p>
+            
+            <a href="https://wa.me/256757649159?text=Hi%20Dana%20Gemz,%20I'm%20interested%20in%20the%20{{ product.name }}" 
+               target="_blank" class="btn-whatsapp">Order via WhatsApp</a>
+        </div>
+        {% empty %}
+        <p class="subtitle">No products available at the moment. Please check back soon!</p>
+        {% endfor %}
+    </div>
+</section>
+
+<!-- Newsletter Marketing Section -->
+<section class="newsletter-section">
+    <div class="newsletter-container">
+        <h2>Join the Dana Gemz VIP Club</h2>
+        <p>Be the first to see new collections and get exclusive offers.</p>
+        
+        <form method="POST" action="{% url 'store:home' %}">
+            {% csrf_token %}
+            <div class="newsletter-form">
+                <input type="email" name="email" placeholder="Enter your email address" required>
+                <button type="submit" class="btn-primary">Subscribe</button>
+            </div>
+        </form>
+    </div>
+</section>
+{% endblock %}
