@@ -27,4 +27,4 @@ services:
         value: 'ChangeMe123!'
     healthCheckPath: / 
     autoDeploy: true
-    staticPublishPath: staticfiles
+    staticPublishPath: static
