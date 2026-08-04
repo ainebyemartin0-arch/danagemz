@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Shopping Cart | Dana Gemz{% endblock %}
+
+{% block content %}
+<section class="cart-section">
+    <div class="container">
+        <div class="cart-header" data-reveal>
+            <h1>Shopping Cart</h1>
+        </div>
+        <div class="cart-container" id="cartContainer" data-reveal>
+            <!-- Cart items will be rendered here by JavaScript -->
+        </div>
+    </div>
+</section>
+{% endblock %}

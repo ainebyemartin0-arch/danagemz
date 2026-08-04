@@ -21,6 +21,9 @@ def shop(request):
     context = {'products': products}
     return render(request, 'shop.html', context)
 
+def cart(request):
+    return render(request, 'cart.html')
+
 def product_detail(request, pk):
     product = get_object_or_404(Product, pk=pk, is_available=True)
     context = {'product': product}
