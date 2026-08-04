@@ -1,5 +1,154 @@
-[{"model": "store.product", "pk": 2, "fields": {"name": "Royal Gold Signet Ring", "description": "A majestic 18k gold-plated signet ring designed for the modern king. Crafted with a smooth finish and heavy weight feel.", "price": "250000.00", "category": "Rings", "image": "products/product_1_34vqjFz.png", "is_available": true, "created_at": "2026-07-31T15:11:45.430Z"}}, {"model": "store.product", "pk": 3, "fields": {"name": "Diamond Tennis Bracelet", "description": "A continuous line of brilliant-cut cubic zirconia stones set in sterling silver. The ultimate symbol of elegance.", "price": "450000.00", "category": "Bracelets", "image": "products/product_2_5p01qpW.png", "is_available": true, "created_at": "2026-07-31T15:11:45.571Z"}}, {"model": "store.product", "pk": 4, "fields": {"name": "Pearl Drop Earrings", "description": "Freshwater pearls suspended from delicate 14k gold hooks. Timeless and perfect for weddings and formal events.", "price": "150000.00", "category": "Earrings", "image": "products/product_3_WbG5Xve.png", "is_available": true, "created_at": "2026-07-31T15:11:45.774Z"}}, {"model": "store.product", "pk": 5, "fields": {"name": "Silver Infinity Necklace", "description": "A minimalist sterling silver necklace featuring an intertwined infinity pendant. Adjustable length.", "price": "120000.00", "category": "Necklaces", "image": "products/product_4_ATZYPje.png", "is_available": true, "created_at": "2026-07-31T15:11:46.011Z"}}, {"model": "store.product", "pk": 6, "fields": {"name": "Rose Gold Halo Ring", "description": "A stunning rose gold center stone surrounded by a halo of micro-pave crystals. Catch the light from every angle.", "price": "320000.00", "category": "Rings", "image": "products/product_5_qP4ZfnT.png", "is_available": true, "created_at": "2026-07-31T15:11:46.172Z"}}, {"model": "store.product", "pk": 7, "fields": {"name": "Vintage Gold Chain", "description": "A heavy, intricately woven gold curb chain. Makes a bold statement on its own or layered.", "price": "380000.00", "category": "Necklaces", "image": "products/product_6_9uNhYPQ.png", "is_available": true, "created_at": "2026-07-31T15:11:46.319Z"}}, {"model": "store.product", "pk": 8, "fields": {"name": "Emerald Stud Earrings", "description": "Deep green emerald-cut stones set in four-prong gold settings. Classic luxury for everyday wear.", "price": "180000.00", "category": "Earrings", "image": "products/product_7_dSZ573M.png", "is_available": true, "created_at": "2026-07-31T15:11:46.482Z"}}, {"model": "store.product", "pk": 9, "fields": {"name": "Minimalist Silver Band", "description": "A sleek, polished sterling silver band. Perfect for stacking or as a modern promise ring.", "price": "90000.00", "category": "Rings", "image": "products/product_8_Tr4w5xz.png", "is_available": true, "created_at": "2026-07-31T15:11:46.633Z"}}, {"model": "store.product", "pk": 10, "fields": {"name": "Sapphire Pendant Necklace", "description": "A deep blue sapphire suspended on a delicate 18k gold-filled chain. A touch of royal blue luxury.", "price": "275000.00", "category": "Necklaces", "image": "products/product_9_px1JMzX.png", "is_available": true, "created_at": "2026-07-31T15:11:46.807Z"}}, {"model": "store.product", "pk": 11, "fields": {"name": "Gold Hoop Earrings", "description": "Medium-sized 18k gold-plated hoops. Lightweight, comfortable, and the most versatile piece you will ever own.", "price": "110000.00", "category": "Earrings", "image": "products/product_10_ymMCGsL.png", "is_available": true, "created_at": "2026-07-31T15:11:46.964Z"}}, {"model": "store.customorder", "pk": 1, "fields": {"name": "martin", "phone_number": "0785517515", "description": "nice one", "reference_image": "custom_orders/18k-gold-cross-pendant.png", "is_completed": false, "created_at": "2026-07-31T13:21:01.190Z"}}, {"model": "store.subscriber", "pk": 1, "fields": {"email": "test@example.com", "subscribed_at": "2026-07-31T13:33:14.789Z"}}]
 [
+{
+  "model": "store.product",
+  "pk": 2,
+  "fields": {
+    "name": "Royal Gold Signet Ring",
+    "description": "A majestic 18k gold-plated signet ring designed for the modern king. Crafted with a smooth finish and heavy weight feel.",
+    "price": "250000.00",
+    "category": "Rings",
+    "image": "products/product_1_34vqjFz.png",
+    "is_available": true,
+    "created_at": "2026-07-31T15:11:45.430Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 3,
+  "fields": {
+    "name": "Diamond Tennis Bracelet",
+    "description": "A continuous line of brilliant-cut cubic zirconia stones set in sterling silver. The ultimate symbol of elegance.",
+    "price": "450000.00",
+    "category": "Bracelets",
+    "image": "products/product_2_5p01qpW.png",
+    "is_available": true,
+    "created_at": "2026-07-31T15:11:45.571Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 4,
+  "fields": {
+    "name": "Pearl Drop Earrings",
+    "description": "Freshwater pearls suspended from delicate 14k gold hooks. Timeless and perfect for weddings and formal events.",
+    "price": "150000.00",
+    "category": "Earrings",
+    "image": "products/product_3_WbG5Xve.png",
+    "is_available": true,
+    "created_at": "2026-07-31T15:11:45.774Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 5,
+  "fields": {
+    "name": "Silver Infinity Necklace",
+    "description": "A minimalist sterling silver necklace featuring an intertwined infinity pendant. Adjustable length.",
+    "price": "120000.00",
+    "category": "Necklaces",
+    "image": "products/product_4_ATZYPje.png",
+    "is_available": true,
+    "created_at": "2026-07-31T15:11:46.011Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 6,
+  "fields": {
+    "name": "Rose Gold Halo Ring",
+    "description": "A stunning rose gold center stone surrounded by a halo of micro-pave crystals. Catch the light from every angle.",
+    "price": "320000.00",
+    "category": "Rings",
+    "image": "products/product_5_qP4ZfnT.png",
+    "is_available": true,
+    "created_at": "2026-07-31T15:11:46.172Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 7,
+  "fields": {
+    "name": "Vintage Gold Chain",
+    "description": "A heavy, intricately woven gold curb chain. Makes a bold statement on its own or layered.",
+    "price": "380000.00",
+    "category": "Necklaces",
+    "image": "products/product_6_9uNhYPQ.png",
+    "is_available": true,
+    "created_at": "2026-07-31T15:11:46.319Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 8,
+  "fields": {
+    "name": "Emerald Stud Earrings",
+    "description": "Deep green emerald-cut stones set in four-prong gold settings. Classic luxury for everyday wear.",
+    "price": "180000.00",
+    "category": "Earrings",
+    "image": "products/product_7_dSZ573M.png",
+    "is_available": true,
+    "created_at": "2026-07-31T15:11:46.482Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 9,
+  "fields": {
+    "name": "Minimalist Silver Band",
+    "description": "A sleek, polished sterling silver band. Perfect for stacking or as a modern promise ring.",
+    "price": "90000.00",
+    "category": "Rings",
+    "image": "products/product_8_Tr4w5xz.png",
+    "is_available": true,
+    "created_at": "2026-07-31T15:11:46.633Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 10,
+  "fields": {
+    "name": "Sapphire Pendant Necklace",
+    "description": "A deep blue sapphire suspended on a delicate 18k gold-filled chain. A touch of royal blue luxury.",
+    "price": "275000.00",
+    "category": "Necklaces",
+    "image": "products/product_9_px1JMzX.png",
+    "is_available": true,
+    "created_at": "2026-07-31T15:11:46.807Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 11,
+  "fields": {
+    "name": "Gold Hoop Earrings",
+    "description": "Medium-sized 18k gold-plated hoops. Lightweight, comfortable, and the most versatile piece you will ever own.",
+    "price": "110000.00",
+    "category": "Earrings",
+    "image": "products/product_10_ymMCGsL.png",
+    "is_available": true,
+    "created_at": "2026-07-31T15:11:46.964Z"
+  }
+},
+{
+  "model": "store.customorder",
+  "pk": 1,
+  "fields": {
+    "name": "martin",
+    "phone_number": "0785517515",
+    "description": "nice one",
+    "reference_image": "custom_orders/18k-gold-cross-pendant.png",
+    "is_completed": false,
+    "created_at": "2026-07-31T13:21:01.190Z"
+  }
+},
+{
+  "model": "store.subscriber",
+  "pk": 1,
+  "fields": {
+    "email": "test@example.com",
+    "subscribed_at": "2026-07-31T13:33:14.789Z"
+  }
+},
 {
   "model": "auth.user",
   "pk": 1,
