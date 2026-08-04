@@ -11,9 +11,9 @@ class Command(BaseCommand):
             self.stdout.write(self.style.SUCCESS('Superuser already exists. Skipping creation.'))
             return
 
-        username = os.environ.get('DJANGO_SUPERUSER_USERNAME', 'admin')
-        email = os.environ.get('DJANGO_SUPERUSER_EMAIL', 'admin@example.com')
-        password = os.environ.get('DJANGO_SUPERUSER_PASSWORD', 'admin123')
+        username = os.environ.get('DJANGO_SUPERUSER_USERNAME', 'martin')
+        email = os.environ.get('DJANGO_SUPERUSER_EMAIL', 'nakamanyadianah@gmail.com')
+        password = os.environ.get('DJANGO_SUPERUSER_PASSWORD', 'martin123.')
 
         User.objects.create_superuser(
             username=username,
