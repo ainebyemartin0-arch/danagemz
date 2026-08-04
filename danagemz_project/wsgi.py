@@ -7,4 +7,4 @@ application = get_wsgi_application()
 
 # Serve static files with WhiteNoise in production
 from whitenoise import WhiteNoise
-application = WhiteNoise(application, root='/opt/render/project/src/staticfiles')
+application = WhiteNoise(application, root=os.path.join(os.path.dirname(os.path.dirname(__file__)), 'staticfiles'))
