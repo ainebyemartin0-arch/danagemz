@@ -16,8 +16,8 @@ class Command(BaseCommand):
         password = os.environ.get('DJANGO_SUPERUSER_PASSWORD', 'martin123.')
 
         User.objects.create_superuser(
-            username=martin,
-            email=nakamanyadianah@gmail.com,
-            password=martin123
+            username=username,
+            email=email,
+            password=password
         )
         self.stdout.write(self.style.SUCCESS(f'Successfully created superuser: {username}'))
