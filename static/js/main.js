@@ -1,3 +1,24 @@
+// Define showToast globally FIRST to prevent race conditions with Django messages
+window.showToast = function(message) {
+    if (!document.getElementById('toastContainer')) {
+        const toastContainer = document.createElement('div');
+        toastContainer.id = 'toastContainer';
+        toastContainer.className = 'toast-container';
+        document.body.appendChild(toastContainer);
+    }
+    const container = document.getElementById('toastContainer');
+    const toast = document.createElement('div');
+    toast.className = 'toast';
+    toast.innerText = message;
+    container.appendChild(toast);
+    void toast.offsetWidth; 
+    toast.classList.add('show');
+    setTimeout(() => {
+        toast.classList.remove('show');
+        setTimeout(() => toast.remove(), 400);
+    }, 3000);
+};
+
 document.addEventListener('DOMContentLoaded', () => {
     // 1. NAVBAR SHRINK & MOBILE MENU
     const navbar = document.getElementById('mainNavbar');
@@ -46,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // 4. RIPPLE EFFECT
-    document.querySelectorAll('.btn-primary, .btn-whatsapp, .nav-cta').forEach(btn => {
+    document.querySelectorAll('.btn-primary, .btn-whatsapp, .nav-cta, .form-submit-btn').forEach(btn => {
         btn.addEventListener('click', function(e) {
             const circle = document.createElement('span');
             const diameter = Math.max(this.clientWidth, this.clientHeight);
@@ -61,31 +82,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 5. TOAST NOTIFICATIONS
-    if (!document.getElementById('toastContainer')) {
-        const toastContainer = document.createElement('div');
-        toastContainer.id = 'toastContainer';
-        toastContainer.className = 'toast-container';
-        document.body.appendChild(toastContainer);
-    }
-    window.showToast = function(message) {
-        const container = document.getElementById('toastContainer');
-        const toast = document.createElement('div');
-        toast.className = 'toast';
-        toast.innerText = message;
-        container.appendChild(toast);
-        void toast.offsetWidth; 
-        toast.classList.add('show');
-        setTimeout(() => {
-            toast.classList.remove('show');
-            setTimeout(() => toast.remove(), 400);
-        }, 3000);
-    };
-
     // =========================================
-    // 6. SHOPPING CART LOGIC (LocalStorage)
+    // 5. SHOPPING CART LOGIC (LocalStorage)
     // =========================================
     let cart = JSON.parse(localStorage.getItem('danagemz_cart')) || [];
+    const shopUrl = document.querySelector('meta[name="shop-url"]').getAttribute('content') || '/shop/';
 
     window.addToCart = function(id, name, price, image) {
         const existingItem = cart.find(item => item.id === id);
@@ -118,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272" /></svg>
                     <h3>Your cart is empty</h3>
                     <p>Looks like you haven't added anything yet.</p>
-                    <a href="/shop/" class="btn-primary">Continue Shopping</a>
+                    <a href="${shopUrl}" class="btn-primary">Continue Shopping</a>
                 </div>
             `;
             return;
