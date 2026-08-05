@@ -26,7 +26,9 @@ def cart(request):
 
 def product_detail(request, pk):
     product = get_object_or_404(Product, pk=pk, is_available=True)
-    context = {'product': product}
+    # Get 4 random related products (excluding the current one)
+    related_products = Product.objects.filter(is_available=True).exclude(pk=pk).order_by('?')[:4]
+    context = {'product': product, 'related_products': related_products}
     return render(request, 'product_detail.html', context)
 
 def about(request):
