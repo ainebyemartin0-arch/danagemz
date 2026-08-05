@@ -86,7 +86,7 @@
             <div class="product-grid">
                 {% for related in related_products %}
                 <article class="product-card">
-                    <a href="{% url 'store:product_detail' related.id %}" style="display: block;">
+                    <a href="{% url 'store:product_detail' related.id %}" style="display:block; width:100%; height:100%;">
                         <div class="product-img-wrapper">
                             {% if related.image %}
                                 <img src="{{ related.image.url }}" alt="{{ related.name }}" class="product-img" loading="lazy">
