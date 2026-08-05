@@ -52,7 +52,7 @@
             <article class="product-card" data-reveal>
                 <div class="product-img-wrapper">
                     <a href="{% url 'store:product_detail' product.id %}" style="display:block; width:100%; height:100%;">
-                        <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static 'images/product_' %}{{ product.id }}.jpg{% endif %}" alt="{{ product.name }}" class="product-img" loading="lazy" onerror="this.onerror=null;this.src='https://via.placeholder.com/300x300?text=Dana+Gemz';">
+                        <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static 'images/product_' %}{{ product.id }}.png{% endif %}" alt="{{ product.name }}" class="product-img" loading="lazy" onerror="this.onerror=null;this.src='https://via.placeholder.com/300x300?text=Dana+Gemz';">
                     </a>
                     <div class="product-overlay">
                         <button aria-label="Add to Wishlist">
