@@ -4,10 +4,13 @@
 
 {% block content %}
 <section class="hero">
-    <img src="{% static 'images/Hero.jpeg' %}" alt="Luxury Jewelry Background" class="hero-bg-img">
+    <!-- Your Local Hero Image -->
+    <img src="{% static 'images/Hero.jpeg' %}" alt="Luxury Jewelry Background" class="hero-bg-img" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=2071';">
+    
     <div class="hero-content">
+        <div class="hero-divider"></div>
         <h1>Timeless Luxury</h1>
-        <p>Crafted to celebrate every moment. Uniquely yours.</p>
+        <p class="hero-tagline">Crafted to celebrate every moment. Uniquely yours.</p>
         <a href="{% url 'store:shop' %}" class="btn-primary">Explore Collection</a>
     </div>
 </section>
@@ -83,7 +86,7 @@
     </div>
 </section>
 
-<!-- Re-added Newsletter Section -->
+<!-- Newsletter Section -->
 <section class="newsletter-section" style="background: var(--color-surface); border-top: 1px solid var(--color-border); padding: 4rem 0; text-align: center; margin-top: 3rem;">
     <div class="container" data-reveal>
         <h2 style="font-size: 2rem; color: var(--color-primary); margin-bottom: 0.5rem;">Join the Dana Gemz VIP Club</h2>

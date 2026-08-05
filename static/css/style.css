@@ -378,3 +378,54 @@ a:focus-visible, button:focus-visible, input:focus-visible { outline: 2px solid 
     .cart-remove { grid-area: remove; justify-self: end; }
     .cart-summary { text-align: center; }
 }
+
+/* =========================================
+   PREMIUM HERO OVERRIDE
+========================================= */
+.hero {
+    height: 100vh; /* Full screen height for cinematic impact */
+    min-height: 700px;
+    display: flex; align-items: center; justify-content: center;
+    text-align: center; position: relative; overflow: hidden; background-color: #050505;
+}
+
+.hero-bg-img {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;
+    z-index: 1; transform: scale(1.1); animation: kenburns 25s var(--ease-smooth) infinite alternate;
+}
+
+/* Deep gradient overlay to make text pop while showing the image */
+.hero::after {
+    content: ""; position: absolute; inset: 0;
+    background: linear-gradient(to bottom, rgba(5,5,5,0.7) 0%, rgba(5,5,5,0.3) 40%, rgba(5,5,5,0.9) 100%);
+    z-index: 2;
+}
+
+.hero-content {
+    position: relative; z-index: 3; max-width: 900px; padding: 0 2rem;
+}
+
+/* Small decorative gold line */
+.hero-divider {
+    width: 60px; height: 2px; background: var(--color-primary);
+    margin: 0 auto 2rem; opacity: 0; animation: fadeIn 1.5s ease 0.2s forwards;
+}
+
+.hero-content h1 {
+    font-size: clamp(3rem, 8vw, 6rem); color: #F8FAFC; margin-bottom: 1rem;
+    text-shadow: 0 4px 30px rgba(0,0,0,0.5);
+    opacity: 0; transform: translateY(20px); animation: fadeUp 1.2s var(--ease-expo) 0.3s forwards;
+}
+
+.hero-content .hero-tagline {
+    font-size: 1rem; letter-spacing: 4px; color: var(--color-primary);
+    text-transform: uppercase; margin-bottom: 2.5rem;
+    opacity: 0; transform: translateY(20px); animation: fadeUp 1.2s var(--ease-expo) 0.5s forwards;
+}
+
+.hero-content .btn-primary {
+    padding: 1.2rem 3rem; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px;
+    opacity: 0; transform: translateY(20px); animation: fadeUp 1.2s var(--ease-expo) 0.7s forwards;
+}
+
+@keyframes fadeIn { to { opacity: 1; } }
